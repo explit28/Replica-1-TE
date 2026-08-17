@@ -1,12 +1,25 @@
 # Briel's Replica-1-TE Rev. 3 (2010)
-
 This repository is a maintained fork of the original **Briel Computers Replica-1-TE Rev. 3** repository:</br>
 https://github.com/Retrotink/Replica-1-TE
 
 The goal of this fork is to preserve the original Replica-1-TE design files, make the repository easier to browse, and add practical improvements for building and using the machine today.
 
-## Modifications in This Fork
+## Photos
+### Replica-1-TE Rev. 3 from 2010
+<img width="1200" height="900" alt="Replica_1_TE3_Black" src="https://github.com/user-attachments/assets/a7eb8ec3-c8e1-41fe-b60c-d85eca711c3d" />
 
+### Replica-1-TE Rev. 0 from 2008
+![replica1TEDETAILS](https://github.com/Retrotink/Replica-1-TE/assets/121696513/3de8c58d-4384-4ac6-88e8-9ecb62998096)
+
+### Replica-1-TE running PAL Firmware
+<img width="1280" height="960" alt="Replica1_TE_PAL_FW" src="https://github.com/user-attachments/assets/8844208f-ace5-4eae-a45c-e9316cef9d0c" />
+
+### Replica-1-TE running NTSC Firmware
+<img width="1131" height="888" alt="Replica1_TE_NTSC_FW" src="https://github.com/user-attachments/assets/525bf362-402a-4016-8f8c-a9d8b32d841e" />
+
+
+
+## Modifications in This Fork
 - Unpacked and reorganized the original archive files
 - Added a modified **Parallax P8X32A Propeller Display/TV driver with PAL composite video support**
 - Improved PAL output for use with modern PAL LCD TVs
@@ -14,7 +27,6 @@ The goal of this fork is to preserve the original Replica-1-TE design files, mak
 - Preserved original NTSC and firmware files for reference and rollback
 
 ## PAL Video Support
-
 The original Replica-1-TE firmware was designed primarily for **NTSC composite video**.
 This fork contains a modified Propeller display/TV backend providing proper **PAL composite output** while retaining the original Replica-1-TE 40×24 character display and the TE keyboard/serial architecture.
 
@@ -33,9 +45,7 @@ Working PAL source:
 Original/known-good NTSC files are preserved alongside it.
 
 ## Repository Contents
-
 ### `Firmware/`
-
 Firmware and binary images used by the Replica-1-TE.
 - `6502.rom0x100 irq address .bin` — original 6502-side ROM binary preserved from the source archive.
 - `P8X32A/` — source and EEPROM image for the Parallax P8X32A Propeller used for video, keyboard and serial I/O.
@@ -54,13 +64,11 @@ Important Propeller files:
 - `FullDuplex.spin` / `fullduplex.spin` — full-duplex serial helper.
 
 ### `Gerber Files/`
-
 PCB manufacturing data for the Replica-1-TE Rev. 3.
 - `r1terev3.zip` — Gerber fabrication archive.
 - `readme` — short description of the Gerber package.
 
 ### `Manuals/`
-
 Original and related documentation.
 - `r1temanJUL2010.pdf` — Replica-1-TE setup, user and kit-assembly manual. The kit inventory/BOM is on pages 13–15.
 - `replica1TEschematic.pdf` — Replica-1-TE schematic.
@@ -71,18 +79,16 @@ Original and related documentation.
 - `mos_hardware.pdf` — MOS Technology hardware reference material.
 
 ### `Software/`
-
 Apple-1 software collection in text/source form, including games and utilities such as Acey Ducey, Blackjack, Bowling, Craps, Disassembler, FIG-Forth, Hammurabi, Life, Lunar, Mastermind, Microchess, Nim, Star Trek and Wumpus.
 
 The `Software/BASIC/` directory contains additional BASIC programs such as ELIZA, Checkers, Hangman, Gomoku, Word Search and Yahtzee.
 
 ## BOM
-
 The Excel BOM derived from the original Replica-1-TE manual is available directly from this repository:</br>
 **[Replica-1-TE Rev. 3 BOM](./Replica-1-TE_Rev3_BOM.xlsx)**
 
-## Firmware Build
 
+## Firmware Build
 The Propeller firmware is written in **Spin/PASM**.
 With OpenSpin, the top-level firmware can be compiled to a 24LC256 EEPROM image, for example:
 
@@ -92,23 +98,7 @@ openspin -e "replica 1TE IOREV04.spin"
 
 Keep a backup of a known-working EEPROM image before testing modified firmware.
 
-## Photos
-
-### Replica-1-TE Rev. 3 from 2010
-<img width="1200" height="900" alt="Replica_1_TE3_Black" src="https://github.com/user-attachments/assets/a7eb8ec3-c8e1-41fe-b60c-d85eca711c3d" />
-
-### Replica-1-TE Rev. 0 from 2008
-![replica1TEDETAILS](https://github.com/Retrotink/Replica-1-TE/assets/121696513/3de8c58d-4384-4ac6-88e8-9ecb62998096)
-
-### Replica-1-TE running PAL Firmware
-<img width="1280" height="960" alt="Replica1_TE_PAL_FW" src="https://github.com/user-attachments/assets/8844208f-ace5-4eae-a45c-e9316cef9d0c" />
-
-### Replica-1-TE running NTSC Firmware
-<img width="1131" height="888" alt="Replica1_TE_NTSC_FW" src="https://github.com/user-attachments/assets/525bf362-402a-4016-8f8c-a9d8b32d841e" />
-
-
 ## Original Project
-
 Original repository:
 https://github.com/Retrotink/Replica-1-TE
 
