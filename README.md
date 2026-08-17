@@ -5,12 +5,13 @@ https://github.com/Retrotink/Replica-1-TE
 The goal of this fork is to preserve the original Replica-1-TE design files, make the repository easier to browse, and add practical improvements for building and using the machine today.
 
 ## Photos
+
 ### Replica-1-TE Rev. 3 from 2010
 <img width="1200" height="900" alt="Replica_1_TE3_Black" src="https://github.com/user-attachments/assets/a7eb8ec3-c8e1-41fe-b60c-d85eca711c3d" />
-### Replica-1-TE Rev. 0 from 2008
-![replica1TEDETAILS](https://github.com/Retrotink/Replica-1-TE/assets/121696513/3de8c58d-4384-4ac6-88e8-9ecb62998096)
+
 ### Replica-1-TE running PAL Firmware
 <img width="1280" height="960" alt="Replica1_TE_PAL_FW" src="https://github.com/user-attachments/assets/8844208f-ace5-4eae-a45c-e9316cef9d0c" />
+
 ### Replica-1-TE running NTSC Firmware
 <img width="1131" height="888" alt="Replica1_TE_NTSC_FW" src="https://github.com/user-attachments/assets/525bf362-402a-4016-8f8c-a9d8b32d841e" />
 
