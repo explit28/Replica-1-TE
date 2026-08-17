@@ -86,7 +86,7 @@ The `Software/BASIC/` directory contains additional BASIC programs such as ELIZA
 
 ## BOM
 
-The Excel BOM derived from the original Replica-1-TE manual is:
+The Excel BOM derived from the original Replica-1-TE manual is:</br>
 https://github.com/Retrotink/Replica-1-TE/Replica-1-TE_Rev3_BOM.xlsx
 
 
@@ -108,7 +108,7 @@ Keep a backup of a known-working EEPROM image before testing modified firmware.
 
 <img width="2560" height="1920" alt="Replica_1_TE3" src="https://github.com/user-attachments/assets/2f17fa03-fc75-4cc8-81f5-b762c55fe4bb" />
 
-### Replica-1-TE Rev. 0 from 2007
+### Replica-1-TE Rev. 0 from 2008
 
 ![replica1TEDETAILS](https://github.com/Retrotink/Replica-1-TE/assets/121696513/3de8c58d-4384-4ac6-88e8-9ecb62998096)
 
