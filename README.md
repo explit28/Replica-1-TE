@@ -86,7 +86,7 @@ The `Software/BASIC/` directory contains additional BASIC programs such as ELIZA
 
 ## BOM
 
-The Excel BOM derived from the original Replica-1-TE manual is available directly from this repository:
+The Excel BOM derived from the original Replica-1-TE manual is available directly from this repository:</br>
 **[Open / download the Replica-1-TE Rev. 3 BOM](./Replica-1-TE_Rev3_BOM.xlsx)**
 
 ## Firmware Build
