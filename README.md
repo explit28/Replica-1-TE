@@ -95,7 +95,7 @@ Keep a backup of a known-working EEPROM image before testing modified firmware.
 ## Photos
 
 ### Replica-1-TE Rev. 3 from 2010
-<img width="2560" height="1920" alt="Replica_1_TE3" src="https://github.com/user-attachments/assets/2f17fa03-fc75-4cc8-81f5-b762c55fe4bb" />
+<img width="1200" height="900" alt="Replica_1_TE3_Black" src="https://github.com/user-attachments/assets/a7eb8ec3-c8e1-41fe-b60c-d85eca711c3d" />
 
 ### Replica-1-TE Rev. 0 from 2008
 ![replica1TEDETAILS](https://github.com/Retrotink/Replica-1-TE/assets/121696513/3de8c58d-4384-4ac6-88e8-9ecb62998096)
