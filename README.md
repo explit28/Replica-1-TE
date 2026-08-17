@@ -114,11 +114,4 @@ https://github.com/Retrotink/Replica-1-TE
 
 The Replica-1 was designed by Vince Briel / Briel Computers as a modern recreation of the Apple-1 computer.
 
-## Status
-
-- Replica-1-TE Rev. 3 files: **preserved**
-- Repository cleanup/reorganization: **in progress**
-- PAL Propeller video driver: **working**
-- BOM reconstruction: **manual-derived spreadsheet created; schematic verification still recommended**
-
-Contributions, corrections and additional information about the Replica-1-TE Rev. 3 are welcome.
+ntributions, corrections and additional information about the Replica-1-TE Rev. 3 are welcome.
