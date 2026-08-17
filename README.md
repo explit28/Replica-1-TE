@@ -1,6 +1,6 @@
-# Replica-1-TE
+# Replica-1-TE Rev. 3 2010
 
-![replica1TE](https://github.com/Retrotink/Replica-1-TE/assets/121696513/8fa6e67f-5e33-47e0-83cf-022b7a673b77)
+<img width="2560" height="1920" alt="Replica_1_TE3" src="https://github.com/user-attachments/assets/2f17fa03-fc75-4cc8-81f5-b762c55fe4bb" />
 
 
 Replica 1 TE Rev 3 files
