@@ -4,117 +4,134 @@ This repository is a maintained fork of the original **Briel Computers Replica-1
 
 https://github.com/Retrotink/Replica-1-TE
 
-The goal of this fork is to preserve the original Replica-1-TE design files while making the repository easier to use and adding several practical improvements.
+The goal of this fork is to preserve the original Replica-1-TE design files, make the repository easier to browse, and add practical improvements for building and using the machine today.
 
 ## Modifications in This Fork
 
-* Unpacked and reorganized the original archive files
-* Added a modified **Parallax P8X32A Propeller Display/TV driver with PAL composite video support**
-* Improved PAL output for use with modern PAL LCD TVs
-* Added a BOM / parts list (**work in progress**)
-* Preserved the original Replica-1-TE Rev. 3 design and firmware files
+- Unpacked and reorganized the original archive files
+- Added a modified **Parallax P8X32A Propeller Display/TV driver with PAL composite video support**
+- Improved PAL output for use with modern PAL LCD TVs
+- Added a BOM / parts list derived from the original Replica-1-TE manual
+- Preserved original NTSC and firmware files for reference and rollback
 
 ## PAL Video Support
 
 The original Replica-1-TE firmware was designed primarily for **NTSC composite video**.
 
-This fork contains a modified Propeller TV/display driver providing proper **PAL composite output** while retaining the original Replica-1-TE 40×24 character display.
+This fork contains a modified Propeller display/TV backend providing proper **PAL composite output** while retaining the original Replica-1-TE 40×24 character display and the TE keyboard/serial architecture.
 
 The PAL implementation uses:
 
-* PAL 50 Hz video timing
-* 312-line frame
-* 4.433618 MHz PAL reference frequency
-* 320-pixel active text display
-* 40 × 24 character layout
-* monochrome black/white text output
-* PAL timing optimized for improved text clarity on modern LCD TVs
+- PAL 50 Hz timing
+- 312-line frame
+- 4.433618 MHz PAL reference frequency
+- 320-pixel active text display
+- 40 × 24 character layout
+- monochrome black/white text output
+- timing optimized for improved text clarity on modern PAL LCD TVs
 
-On PAL LCD displays, the modified driver produces noticeably sharper character output than the original NTSC firmware.
+Working PAL source:
 
-The PAL modification affects the **display/TV driver only**. The Replica-1-TE keyboard, serial interface, Apple-1 interface and other I/O functionality remain based on the original Replica-1-TE firmware.
+`Firmware/P8X32A/char_mode_08_TV_PAL_PARALLAX_V1.spin`
 
-## Hardware
+Original/known-good NTSC files are preserved alongside it.
 
-The Replica-1-TE Rev. 3 is an Apple-1 compatible computer designed by **Briel Computers**.
+## Repository Contents
 
-Among other components, the Rev. 3 uses a **Parallax P8X32A Propeller** as its I/O controller for functions including:
+### `Firmware/`
 
-* Composite video generation
-* PS/2 keyboard interface
-* ASCII keyboard interface
-* Serial communication
+Firmware and binary images used by the Replica-1-TE.
 
-The Propeller firmware is stored in a **24LC256 EEPROM** and can be rebuilt and programmed independently.
+- `6502.rom0x100 irq address .bin` — original 6502-side ROM binary preserved from the source archive.
+- `P8X32A/` — source and EEPROM image for the Parallax P8X32A Propeller used for video, keyboard and serial I/O.
 
-## Repository Structure
+Important Propeller files:
 
-The repository contains the original Replica-1-TE Rev. 3 design material together with the modifications from this fork.
+- `replica 1TE IOREV04.spin` — top-level Replica-1-TE Propeller firmware.
+- `replica 1TE IOREV04.eeprom` — compiled EEPROM image for the 24LC256.
+- `char_mode_08.spin` — 40×24 character-display and font handling.
+- `char_mode_08_TV.spin` — active TV/composite backend.
+- `char_mode_08_TV_Original.spin` — preserved original TV driver.
+- `char_mode_08_TV_NTSC_GOOD.spin` — known-good NTSC backup.
+- `char_mode_08_TV_PAL_PARALLAX_V1.spin` — modified PAL TV backend.
+- `char_mode_09.spin` / `char_mode_09_TV.spin` — alternate character-mode object names retained by the original firmware layout.
+- `Keyboard.spin` / `keyboard.spin` — keyboard handling sources.
+- `Serial_IO.spin` — serial I/O integration.
+- `FullDuplex.spin` / `fullduplex.spin` — full-duplex serial helper.
 
-Depending on the directory, this includes:
+### `Gerber Files/`
 
-* Schematics
-* PCB/design files
-* Propeller firmware sources
-* Apple-1 software
-* Documentation
-* BOM / component information
+PCB manufacturing data for the Replica-1-TE Rev. 3.
 
-The original compressed archives have been unpacked and rearranged to make the individual files easier to browse and use.
+- `r1terev3.zip` — Gerber fabrication archive.
+- `readme` — short description of the Gerber package.
 
-## Firmware
+### `Manuals/`
 
-The firmware is written in **Spin/PASM** for the Parallax P8X32A Propeller.
+Original and related documentation.
 
-The PAL modification is implemented in the Display/TV driver while retaining the original higher-level Replica-1-TE firmware.
+- `r1temanJUL2010.pdf` — Replica-1-TE setup, user and kit-assembly manual. The kit inventory/BOM is on pages 13–15.
+- `replica1TEschematic.pdf` — Replica-1-TE schematic.
+- `Apple1Manual.pdf` — Apple-1 operation/reference manual.
+- `Apple1Basic.pdf` — Apple-1 BASIC documentation.
+- `krusader12.pdf` — Krusader assembler manual.
+- `Slot Expander I board.pdf` — Slot Expander I documentation.
+- `mos_hardware.pdf` — MOS Technology hardware reference material.
 
-For the PAL version, the relevant display driver is based on the Replica-1-TE character display code with the low-level video generation adapted for proper PAL timing.
+### `Software/`
 
-### Building
+Apple-1 software collection in text/source form, including games and utilities such as Acey Ducey, Blackjack, Bowling, Craps, Disassembler, FIG-Forth, Hammurabi, Life, Lunar, Mastermind, Microchess, Nim, Star Trek and Wumpus.
 
-The firmware can be compiled with a compatible Propeller Spin compiler such as **OpenSpin**.
+The `Software/BASIC/` directory contains additional BASIC programs such as ELIZA, Checkers, Hangman, Gomoku, Word Search and Yahtzee.
 
-Example:
+## BOM
+
+The Excel BOM derived from the original Replica-1-TE manual is:
+
+`Replica-1-TE_Rev3_BOM.xlsx`
+
+The manual contains a few inconsistencies that are intentionally **not silently corrected**:
+
+- **3.3 kΩ resistors:** quantity is listed as 9, while the references are only `R1-R8`.
+- **100 µF capacitor:** quantity is listed as 1 with `C21, C22`; the assembly instructions explicitly install a single 100 µF capacitor at `C21`.
+
+These rows are flagged in the spreadsheet for schematic/PCB verification.
+
+The BOM should therefore be treated as a carefully structured **manual-derived assembly inventory**, not yet as a production-ready procurement BOM with verified manufacturer part numbers and footprints.
+
+## Firmware Build
+
+The Propeller firmware is written in **Spin/PASM**.
+
+With OpenSpin, the top-level firmware can be compiled to a 24LC256 EEPROM image, for example:
 
 ```bash
 openspin -e "replica 1TE IOREV04.spin"
 ```
 
-This generates an EEPROM image suitable for the **24LC256** used by the Replica-1-TE.
-
-Always keep a backup of a known-working EEPROM image before testing modified firmware.
-
-## BOM
-
-A Bill of Materials for the Replica-1-TE Rev. 3 is being reconstructed and verified.
-
-**Status: Work in progress**
-
-Some original documentation does not provide manufacturer part numbers or exact mechanical specifications for every component, so the BOM should currently be treated as a reference rather than a production-ready PCBA BOM.
+Keep a backup of a known-working EEPROM image before testing modified firmware.
 
 ## Photos
 
-<img width="2560" height="1920" alt="Replica-1-TE Rev. 3" src="https://github.com/user-attachments/assets/2f17fa03-fc75-4cc8-81f5-b762c55fe4bb" />
+<img width="2560" height="1920" alt="Replica_1_TE3" src="https://github.com/user-attachments/assets/2f17fa03-fc75-4cc8-81f5-b762c55fe4bb" />
 
 ### Original Replica-1-TE Rev. 3
 
-![Replica-1-TE Details](https://github.com/Retrotink/Replica-1-TE/assets/121696513/3de8c58d-4384-4ac6-88e8-9ecb62998096)
+![replica1TEDETAILS](https://github.com/Retrotink/Replica-1-TE/assets/121696513/3de8c58d-4384-4ac6-88e8-9ecb62998096)
 
 ## Original Project
 
-This repository is based on the original Replica-1-TE repository:
+Original repository:
 
 https://github.com/Retrotink/Replica-1-TE
 
-The **Replica-1** was designed by Vince Briel / Briel Computers as a modern recreation of the Apple-1 computer.
-
-This fork is intended to preserve that work while adding documentation, organization and firmware improvements useful for building and operating the Replica-1-TE Rev. 3 today.
+The Replica-1 was designed by Vince Briel / Briel Computers as a modern recreation of the Apple-1 computer.
 
 ## Status
 
-* Replica-1-TE Rev. 3 files: **preserved**
-* Repository cleanup/reorganization: **in progress**
-* PAL Propeller video driver: **working**
-* BOM reconstruction: **in progress**
+- Replica-1-TE Rev. 3 files: **preserved**
+- Repository cleanup/reorganization: **in progress**
+- PAL Propeller video driver: **working**
+- BOM reconstruction: **manual-derived spreadsheet created; schematic verification still recommended**
 
 Contributions, corrections and additional information about the Replica-1-TE Rev. 3 are welcome.
