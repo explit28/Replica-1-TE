@@ -87,17 +87,8 @@ The `Software/BASIC/` directory contains additional BASIC programs such as ELIZA
 ## BOM
 
 The Excel BOM derived from the original Replica-1-TE manual is:
+https://github.com/Retrotink/Replica-1-TE/Replica-1-TE_Rev3_BOM.xlsx
 
-`Replica-1-TE_Rev3_BOM.xlsx`
-
-The manual contains a few inconsistencies that are intentionally **not silently corrected**:
-
-- **3.3 kΩ resistors:** quantity is listed as 9, while the references are only `R1-R8`.
-- **100 µF capacitor:** quantity is listed as 1 with `C21, C22`; the assembly instructions explicitly install a single 100 µF capacitor at `C21`.
-
-These rows are flagged in the spreadsheet for schematic/PCB verification.
-
-The BOM should therefore be treated as a carefully structured **manual-derived assembly inventory**, not yet as a production-ready procurement BOM with verified manufacturer part numbers and footprints.
 
 ## Firmware Build
 
@@ -113,9 +104,11 @@ Keep a backup of a known-working EEPROM image before testing modified firmware.
 
 ## Photos
 
+### Replica-1-TE Rev. 3 from 2010
+
 <img width="2560" height="1920" alt="Replica_1_TE3" src="https://github.com/user-attachments/assets/2f17fa03-fc75-4cc8-81f5-b762c55fe4bb" />
 
-### Original Replica-1-TE Rev. 3
+### Replica-1-TE Rev. 0 from 2007
 
 ![replica1TEDETAILS](https://github.com/Retrotink/Replica-1-TE/assets/121696513/3de8c58d-4384-4ac6-88e8-9ecb62998096)
 
