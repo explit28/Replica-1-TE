@@ -7,7 +7,7 @@ The goal of this fork is to preserve the original Replica-1-TE design files, mak
 ## Photos
 
 ### Replica-1-TE Rev. 3 from 2010
-<img width="1200" height="900" alt="Replica_1_TE3_Black" src="https://github.com/user-attachments/assets/a7eb8ec3-c8e1-41fe-b60c-d85eca711c3d" />
+<img width="1137" height="705" alt="Replica_1_TE3" src="https://github.com/user-attachments/assets/7093116c-7d39-4e85-a65f-ffe1bc731ffc" />
 
 ### Replica-1-TE running PAL Firmware
 <img width="1280" height="960" alt="Replica1_TE_PAL_FW" src="https://github.com/user-attachments/assets/8844208f-ace5-4eae-a45c-e9316cef9d0c" />
