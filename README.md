@@ -91,6 +91,9 @@ With OpenSpin, the top-level firmware can be compiled to a 24LC256 EEPROM image,
 ```bash
 openspin -e "replica 1TE IOREV04.spin"
 ```
+## Interesting links
+Faster serial port mod for the Replica 1 TE: https://sowerbutts.com/replica1-serial/
+Binary file uploader send2a1 from @venice1200: https://github.com/venice1200/Retro/tree/main/Apple-1/send2a1
 
 Keep a backup of a known-working EEPROM image before testing modified firmware.
 
