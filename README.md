@@ -99,7 +99,7 @@ Binary file uploader send2a1 from @venice1200: https://github.com/venice1200/Ret
 
 ## Original Project
 Original repository:
-https://github.com/Retrotink/Replica-1-TE
+https://github.com/Retrotink/Replica-1-TE<br>
 
 <a href="https://www.pcbway.com/project/shareproject/Apple_1_Replica_1_TE_4a0a9955.html"><img src="https://www.pcbway.com/project/img/images/frompcbway-1220.png" alt="PCB from PCBWay" /></a>
 
