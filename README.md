@@ -101,6 +101,9 @@ Binary file uploader send2a1 from @venice1200: https://github.com/venice1200/Ret
 Original repository:
 https://github.com/Retrotink/Replica-1-TE
 
+<a href="https://www.pcbway.com/project/shareproject/Apple_1_Replica_1_TE_4a0a9955.html"><img src="https://www.pcbway.com/project/img/images/frompcbway-1220.png" alt="PCB from PCBWay" /></a>
+
+
 The Replica-1 was designed by Vince Briel / Briel Computers as a modern recreation of the Apple-1 computer.
 
 Contributions, corrections and additional information about the Replica-1-TE Rev. 3 are welcome.
